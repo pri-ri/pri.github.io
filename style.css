@@ -1,0 +1,134 @@
+/* ========== Custom Styles & Animations ========== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f1f1f1; /* Warm Creamy Background */
+}
+/* ========== Custom Font Class ========== */
+.font-display {
+    font-family: 'Playfair Display', serif;
+}
+/* Timeline Styling */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #2f9ea8; /* Lighter teal */
+    border: 3px solid #e1ede5; /* Lightest teal */
+}
+
+/* Subtle Card Top Border Style (New) */
+.card-outline-project,
+.card-outline-blog,
+.card-outline-book {
+    /* This ensures a clean slate, removing any other border styles */
+    border: none;
+}
+
+.card-outline-project {
+    border-top: 6px solid #80cbc4; /* Muted Blue (sky-300) */
+}
+.card-outline-blog {
+    border-top: 6px solid #80cbc4; /* Thematic Teal (teal-300) */
+}
+.card-outline-book {
+    border-top: 6px solid #80cbc4; /* Neutral Slate (slate-300) */
+}
+
+/* ========== Scroll Animation Styles ========== */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* ========== Modal Styles ========== */
+#project-modal.is-open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#project-modal.is-open #modal-content {
+    transform: scale(1);
+}
+
+/* ========== Shimmer Animation Styles (NEW) ========== */
+@keyframes shimmer {
+    0%, 100% {
+        transform: scale(0.8) translate(0, 0);
+        opacity: 0.2;
+    }
+    50% {
+        transform: scale(1.2) translate(20px, -20px);
+        opacity: 0.5;
+    }
+}
+
+.shimmer-dot {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(40px); /* This creates the soft, blurry look */
+    animation: shimmer 20s ease-in-out infinite;
+    opacity: 0;
+}
+
+
+
+/* ========== Shooting Star Particle Styles (NEW) ========== */
+.shooting-star {
+    position: absolute;
+    border-radius: 50%;
+    /* A subtle glow effect that looks great on our dark teal stars */
+    box-shadow: 0 0 10px 2px currentColor; 
+    /* We will control opacity and transform with JavaScript */
+    transition: opacity 0.5s ease-out; 
+}
+
+/* ========== Connected Highlights Styles (NEW) ========== */
+
+.role-item-connected {
+    position: relative;
+    padding-left: 4rem; /* Create space for the line and dot */
+    padding-bottom: 2rem;
+}
+
+/* The connector dot on the timeline */
+.role-item-connected::before {
+    content: '';
+    position: absolute;
+    left: 10px; /* Position dot on the timeline */
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    border: 4px solid #80cbc4; /* teal-200 */
+}
+
+/* Remove the space below the very last item */
+.role-item-connected:last-child {
+    padding-bottom: 0;
+}
+
+.role-content ul {
+    list-style-type: none;
+    padding-left: 0;
+    color: #475569; /* slate-600 */
+}
+
+.role-content li {
+    display: flex;
+    align-items: flex-start;
+}
+
+.role-content li i {
+    margin-top: 5px; /* Align icon better with the text */
+    flex-shrink: 0;
+}

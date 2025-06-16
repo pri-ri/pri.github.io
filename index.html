@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priyadharshini Rajaram | Product Manager Portfolio</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- START: NEW Tailwind Theme Configuration -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            teal: {
+              50: '#e0f2f1',
+              100: '#b2dfdb',
+              200: '#80cbc4',
+              300: '#4db6ac',
+              400: '#26a69a',
+              500: '#009688', // A standard Teal
+              600: '#2f9ea8', // Your Custom Teal
+              700: '#00796b',
+              800: '#00695c',
+              900: '#004d40'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <!-- END: NEW Tailwind Theme Configuration -->
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Security Library for rendering content -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.6/purify.min.js"></script>
+
+    <!-- Link to your stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-slate-600 antialiased">
+
+    <!-- ========== HEADER ========== -->
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-lg shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="font-bold text-2xl text-slate-800">PR.</a>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-700 items-center">
+            <a href="#about" class="hover:text-teal-600 transition-colors">About</a>
+<a href="#experience" class="hover:text-teal-600 transition-colors">Experience</a>
+<a href="#projects" class="hover:text-teal-600 transition-colors">Projects</a>
+<a href="#blog" class="hover:text-teal-600 transition-colors">Blog</a>
+<a href="#contact" class="bg-teal-200 text-teal-900 px-4 py-2 rounded-full hover:bg-teal-300 transition-all shadow">Contact Me</a>
+</div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="menu-toggle-btn" class="md:hidden text-2xl z-50">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-0 left-0 w-full h-screen bg-white/95 backdrop-blur-lg">
+            <div class="flex flex-col items-center justify-center h-full space-y-8 text-xl">
+                <a href="#about" class="mobile-menu-link font-semibold text-slate-700 hover:text-teal-600">About</a>
+                <a href="#experience" class="mobile-menu-link font-semibold text-slate-700 hover:text-teal-600">Experience</a>
+                <a href="#projects" class="mobile-menu-link font-semibold text-slate-700 hover:text-teal-600">Projects</a>
+                <a href="#blog" class="mobile-menu-link font-semibold text-slate-700 hover:text-teal-600">Blog</a>
+                <a href="#contact" class="mobile-menu-link bg-teal-200 text-teal-900 px-6 py-3 rounded-full hover:bg-teal-300">Contact Me</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="container mx-auto px-6 py-12 md:py-20">
+       
+        <!-- ========== Hero Section ========== -->
+<section class="text-center">
+      
+    <div id="shimmer-container" class="absolute inset-0 -z-10">
+        <!-- This container is now a blank canvas for our JS particles -->
+    </div>
+    <!-- START: New Name "Strip" -->
+    <div class="mb-5">
+        <span class="inline-block bg-teal-100 text-teal-800 px-3 py-1 rounded-md font-semibold text-sm tracking-wider uppercase">
+            Priyadharshini Rajaram
+        </span>
+    </div>
+    <!-- END: New Name "Strip" -->
+
+    <!-- Updated Headline -->
+    <h1 class="text-4xl md:text-5xl font-bold text-slate-800 leading-tight">I Make Tech Feel More Human.</h1>
+    
+    <!-- Updated Tagline -->
+    <p class="mt-4 text-xl text-slate-500 max-w-4xl mx-auto">I'm Priyadharshini, a Product Manager with a passion for human-centered design and the technical chops to bring it to life. I thrive in that creative space between a user's 'aha!' moment and an engineer's 'how-to', and this site is my canvas to explore it all—from professional deep-dives to personal curiosities.</p>
+
+</section>
+        
+        <!-- ========== About Section (Updated) ========== -->
+<section id="about" class="mt-24">
+    <div class="grid md:grid-cols-3 gap-12 items-center">
+        <!-- Image Column -->
+        <div class="md:col-span-1 flex justify-center">
+            <img src="images/profile-illustration.png" alt="Illustration of Priyadharshini Rajaram" class="w-72 h-90 rounded-full shadow-2xl border-8 border-teal-200 transform hover:scale-105 transition-transform">
+        </div>
+        
+        <!-- Text Content Column -->
+        <div class="md:col-span-2 animate-on-scroll">
+            <h2 class="text-2xl font-bold text-slate-800 mb-4">A Little About Me</h2>
+            <p class="text-slate-500 mb-6">
+                Before I was shaping products, I was shipping code. As a full-stack developer, I loved the logic and challenge of building software. But I quickly realized my real passion wasn't just in writing the code, but in architecting the *experience*. I was the developer who was always fascinated by the human story behind every feature.
+                <br>
+                Making the leap to product management was a natural evolution. It allowed me to combine my firsthand knowledge of building software with my passion for crafting the user's journey—creating products that are not only technically sound, but are a genuine joy for people to use.
+                </p>
+
+            <!-- START: New Social & Resume Icons -->
+            <div class="mt-6 mb-8 flex items-center space-x-6">
+                <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" aria-label="View my LinkedIn profile" title="LinkedIn Profile" class="text-slate-500 hover:text-teal-600 transition-colors text-2xl">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://instagram.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="View my Instagram profile" title="Instagram Profile" class="text-slate-500 hover:text-teal-600 transition-colors text-2xl">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="resume/Priyadharshini-Rajaram-Resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download my Resume" title="Download Resume" class="text-slate-500 hover:text-teal-600 transition-colors text-2xl">
+                    <i class="fas fa-file-arrow-down"></i>
+                </a>
+            </div>
+            <!-- END: New Social & Resume Icons -->
+        </div>
+    </div>
+</section>
+
+<!-- ========== Skills & Philosophy Section (NEW) ========== -->
+<section id="approach" class="mt-24">
+    <!-- The new main heading for the section -->
+    <div class="text-center animate-on-scroll">
+        <h2 class="text-3xl font-bold text-slate-800 mb-12">My Approach & Philosophy</h2>
+    </div>
+
+    <!-- The grid you just "cut" goes inside here, now perfectly centered -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10 max-w-4xl mx-auto">
+        <div class="animate-on-scroll">
+            <h3 class="font-bold text-lg mb-3 flex items-center text-slate-700">
+                <i class="fas fa-star text-teal-400 mr-2"></i> My PM Superpowers
+            </h3>
+            <ul class="list-none space-y-2 text-slate-500">
+                <li class="pl-4 border-l-2 border-teal-200"><strong>Full-Spectrum Empathy:</strong> I can empathize with the user's needs *and* the engineer's challenges, making for smoother, faster, and happier development cycles.</li>
+                <li class="pl-4 border-l-2 border-teal-200"><strong>From Code to Customer:</strong> My background allows me to grasp technical constraints instantly, leading to more realistic roadmaps and better-informed decisions.</li>
+                <li class="pl-4 border-l-2 border-teal-200"><strong>Clear, Concise Communication:</strong> Translating complex user stories for engineers, and complex technical trade-offs for stakeholders.</li>
+            </ul>
+        </div>
+        <div class="animate-on-scroll">
+            <h3 class="font-bold text-lg mb-3 flex items-center text-slate-700">
+                <i class="fas fa-book-open text-orange-400 mr-2"></i> Currently Geeking Out On
+            </h3>
+            <ul class="list-none space-y-2 text-slate-500">
+                <li class="pl-4 border-l-2 border-orange-200">
+                    <strong>Beyond the Feature Factory:</strong> Setting product goals based on measurable user *outcomes*, not just a checklist of things to build.
+                </li>
+                <li class="pl-4 border-l-2 border-orange-200">
+                    <strong>AI as a Creative Partner:</strong> Exploring how generative AI can be used not just for efficiency, but as a brainstorming tool to spark new and unexpected ideas.
+                </li>
+                <li class="pl-4 border-l-2 border-orange-200">
+                    <strong>The Psychology of Onboarding:</strong> How can the first 30 seconds of using a product create a lifelong, happy user?
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+        
+<!-- ========== Experience Section (NEW "Connected Highlights" Design) ========== -->
+<section id="experience" class="mt-24">
+    <div class="text-center animate-on-scroll">
+        <h2 class="text-3xl font-bold text-slate-800 mb-16">My Professional Journey</h2>
+    </div>
+
+    <!-- Container for the roles with the line -->
+    <div class="relative max-w-3xl mx-auto">
+        <!-- The new vertical line -->
+        <div class="absolute left-4 top-2 h-full w-0.5 bg-teal-200"></div>
+
+        <div class="space-y-16">
+            <!-- Role Highlight 1 -->
+            <div class="role-item-connected animate-on-scroll">
+                <div class="role-content">
+                    <h3 class="text-2xl font-bold text-slate-800">Product Manager</h3>
+                    <p class="text-teal-600 font-semibold">Awesome Tech Inc. <span class="text-slate-400 font-normal">| Jan 2022 - Present</span></p>
+                    <p class="mt-4 text-slate-600">I was brought in to spearhead the creation of their flagship mobile platform from the ground up...</p>
+                    <ul class="mt-4 space-y-2">
+                        <li><i class="fas fa-check-circle text-teal-400 mr-2"></i>Owned the product roadmap...</li>
+                        <li><i class="fas fa-check-circle text-teal-400 mr-2"></i>Translated ambiguous user feedback...</li>
+                        <li><i class="fas fa-check-circle text-teal-400 mr-2"></i>Used data analytics...</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Role Highlight 2 -->
+            <div class="role-item-connected animate-on-scroll">
+                <div class="role-content">
+                    <h3 class="text-2xl font-bold text-slate-800">Associate Product Manager</h3>
+                    <p class="text-teal-600 font-semibold">Solutions Co. <span class="text-slate-400 font-normal">| Jun 2020 - Dec 2021</span></p>
+                    <p class="mt-4 text-slate-600">This was my proving ground...</p>
+                    <ul class="mt-4 space-y-2">
+                        <li><i class="fas fa-check-circle text-teal-400 mr-2"></i>Became the team's research lead...</li>
+                        <li><i class="fas fa-check-circle text-teal-400 mr-2"></i>Pioneered a new, data-informed onboarding flow...</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Role Highlight 3 -->
+            <div class="role-item-connected animate-on-scroll">
+                <div class="role-content">
+                    <h3 class="text-2xl font-bold text-slate-800">Full-Stack Developer</h3>
+                    <p class="text-teal-600 font-semibold">Innovate LLC. <span class="text-slate-400 font-normal">| 2018 - 2020</span></p>
+                    <p class="mt-4 text-slate-600">This is where I built my technical foundation...</p>
+                    <ul class="mt-4 space-y-2">
+                        <li><i class="fas fa-check-circle text-teal-400 mr-2"></i>Acted as a key technical resource...</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ========== Skills Section (NEW) ========== -->
+<section id="skills" class="mt-24">
+    <h2 class="text-3xl font-bold text-slate-800 text-center mb-12 animate-on-scroll">Core Skills</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Category 1: Product & Strategy -->
+        <div class="bg-white p-6 rounded-2xl shadow-md animate-on-scroll card-outline-project">
+            <h3 class="font-bold text-xl text-slate-700 mb-4 text-center">Product & Strategy</h3>
+            <div class="flex flex-wrap justify-center gap-2 text-sm font-medium">
+                <span class="bg-slate-200 text-slate-700 px-3 py-1 rounded-full">Roadmapping</span>
+                <span class="bg-slate-200 text-slate-700 px-3 py-1 rounded-full">User Research</span>
+                <span class="bg-slate-200 text-slate-700 px-3 py-1 rounded-full">A/B Testing</span>
+                <span class="bg-slate-200 text-slate-700 px-3 py-1 rounded-full">Agile/Scrum</span>
+                <span class="bg-slate-200 text-slate-700 px-3 py-1 rounded-full">Market Analysis</span>
+                <span class="bg-slate-200 text-slate-700 px-3 py-1 rounded-full">User Personas</span>
+            </div>
+        </div>
+
+        <!-- Category 2: Technical & Data -->
+        <div class="bg-white p-6 rounded-2xl shadow-md animate-on-scroll card-outline-book">
+             <h3 class="font-bold text-xl text-slate-700 mb-4 text-center">Technical & Data</h3>
+             <div class="flex flex-wrap justify-center gap-2 text-sm font-medium">
+                <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full">Advanced SQL</span>
+                <span class="bg-slate-200 text-slate-700 px-3 py-1 rounded-full">API Integration</span>
+                <span class="bg-slate-200 text-slate-700 px-3 py-1 rounded-full">Data Analysis</span>
+                <span class="bg-slate-200 text-slate-700 px-3 py-1 rounded-full">Google Analytics</span>
+                <span class="bg-slate-200 text-slate-700 px-3 py-1 rounded-full">Looker Studio</span>
+             </div>
+        </div>
+
+        <!-- Category 3: Tools & Platforms -->
+        <div class="bg-white p-6 rounded-2xl shadow-md animate-on-scroll card-outline-blog">
+             <h3 class="font-bold text-xl text-slate-700 mb-4 text-center">Tools & Platforms</h3>
+             <div class="flex flex-wrap justify-center gap-2 text-sm font-medium">
+                <span class="bg-slate-200 text-slate-700 px-3 py-1 rounded-full">Jira</span>
+                <span class="bg-slate-200 text-slate-700 px-3 py-1 rounded-full">Figma</span>
+                <span class="bg-slate-200 text-slate-700 px-3 py-1 rounded-full">Webflow</span>
+                <span class="bg-slate-200 text-slate-700 px-3 py-1 rounded-full">Amplitude</span>
+                <span class="bg-slate-200 text-slate-700 px-3 py-1 rounded-full">Substack</span>
+             </div>
+        </div>
+
+    </div>
+</section>
+        
+     <!-- ========== Projects Section (Updated) ========== -->
+<section id="projects" class="mt-24">
+    <h2 class="text-3xl font-bold text-slate-800 text-center mb-12 animate-on-scroll">Projects & Case Studies</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Project Card 1 -->
+        <a href="#" class="project-card-link block bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform group card-outline-project animate-on-scroll"
+           data-title="Project Alpha Case Study"
+           data-image="https://placehold.co/1200x600/7dd3fc/1f2937?text=Project+Alpha"
+           data-tags="UX/UI Redesign, User Research, Mobile App"
+           data-body="<p>Complete redesign of a user onboarding flow for a mobile finance app. The goal was to reduce drop-off rates by 20% and improve user comprehension of key features.</p><p class='mt-4'>We conducted user interviews, created detailed journey maps, and ran multiple A/B tests on our Figma prototypes before a single line of code was written. The final result was a 28% reduction in user drop-offs and a significant increase in positive App Store reviews.</p>"
+           data-live-link="https://example.com/live-project-alpha"
+           data-github-link="https://github.com/your-username/project-alpha">
+            <div class="p-6">
+                <h3 class="font-bold text-xl mb-2 text-slate-700">Project Alpha Case Study</h3>
+                <p class="text-slate-500 text-sm mb-4">Complete redesign of a user onboarding flow...</p>
+                <span class="font-semibold text-teal-600 group-hover:underline">Read Case Study →</span>
+            </div>
+        </a>
+
+        <!-- Project Card 2 -->
+        <a href="#" class="project-card-link block bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform group card-outline-project animate-on-scroll"
+           data-title="E-commerce Feature Launch"
+           data-image="https://placehold.co/1200x600/f9a8d4/1f2937?text=E-commerce+Launch"
+           data-tags="Feature Launch, A/B Testing, Data Analysis"
+           data-body="<p>Led the cross-functional team to launch a 'Buy Now, Pay Later' integration into our e-commerce checkout system. This involved vendor selection, API integration scoping, and designing the user-facing prompts.</p><p class='mt-4'>The feature increased average order value by 15% in the first quarter after launch.</p>"
+           data-live-link="https://example.com/live-e-commerce"
+           data-github-link=""> <!-- Keep empty if no link -->
+             <div class="p-6">
+                <h3 class="font-bold text-xl mb-2 text-slate-700">E-commerce Feature Launch</h3>
+                <p class="text-slate-500 text-sm mb-4">Launched a new checkout system...</p>
+                <span class="font-semibold text-teal-600 group-hover:underline">View Project Details →</span>
+            </div>
+        </a>
+
+        <!-- Project Card 3 -->
+        <a href="#" class="project-card-link block bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform group card-outline-project animate-on-scroll"
+           data-title="Personal Portfolio Website"
+           data-image="https://placehold.co/1200x600/6ee7b7/1f2937?text=Portfolio"
+           data-tags="Web Development, Tailwind CSS, JavaScript"
+           data-body="<p>The very site you're on! Designed and built from scratch using HTML, Tailwind CSS, and vanilla JavaScript. Features include a dynamic Substack blog feed, scroll animations via Intersection Observer, and this interactive modal you're currently viewing.</p>"
+           data-live-link="#"
+           data-github-link="https://github.com/your-username/your-portfolio">
+            <div class="p-6">
+                <h3 class="font-bold text-xl mb-2 text-slate-700">Personal Portfolio Website</h3>
+                <p class="text-slate-500 text-sm mb-4">The very site you're on!...</p>
+                <span class="font-semibold text-teal-600 group-hover:underline">See on GitHub →</span>
+            </div>
+        </a>
+
+    </div>
+</section>
+        
+        <!-- Blog Section -->
+        <section id="blog" class="mt-24"><h2 class="text-3xl font-bold text-slate-800 text-center mb-8 animate-on-scroll">From My Blog</h2><div id="blog-grid" class="grid md:grid-cols-2 gap-8"><p class="text-center md:col-span-2 text-slate-500">Loading latest posts...</p></div><div class="text-center mt-8 animate-on-scroll"><a href="https://priri.substack.com" target="_blank" rel="noopener noreferrer" class="font-semibold text-teal-600 hover:underline">See all posts on Substack →</a></div></section>
+        
+ <!-- ========== Hobbies Section (NEW and Rebuilt) ========== -->
+
+<section id="hobbies" class="mt-24">
+    <!-- Main Section Heading -->
+    <div class="text-center animate-on-scroll">
+        <h2 class="text-3xl font-bold text-slate-800 mb-4">Outside of Work</h2>
+        <p class="max-w-2xl mx-auto text-slate-500">When I'm not thinking about products, I'm usually diving into stories in all their forms. Here are a few things I've enjoyed lately.</p>
+    </div>
+
+    <!-- ===== Tab Navigation ===== -->
+    <div class="mt-12 mb-8 border-b border-slate-200 flex justify-center animate-on-scroll">
+        <div id="tabs-container" class="flex space-x-4 md:space-x-8">
+            <button data-tab="books" class="tab-btn font-semibold pb-3 border-b-2 -mb-px">Books</button>
+            <button data-tab="movies" class="tab-btn font-semibold pb-3 border-b-2 -mb-px">Movies & TV</button>
+            <button data-tab="art" class="tab-btn font-semibold pb-3 border-b-2 -mb-px">Art</button>
+        </div>
+    </div>
+
+    <!-- ===== Tab Content Panels ===== -->
+    <div id="tab-content-panels">
+        <!-- == Books Panel == -->
+        <div id="books-panel" class="tab-panel animate-on-scroll">
+            <div class="grid md:grid-cols-2 gap-x-8 gap-y-6">
+                <!-- Book Card 1 -->
+                <a href="#" target="_blank" class="flex items-start gap-4 p-3 rounded-lg hover:bg-white transition-colors group">
+                    <img src="https://placehold.co/150x225/7dd3fc/1f2937?text=Book+Cover" alt="Book Cover" class="w-20 h-auto object-contain rounded-md flex-shrink-0">
+                    <div>
+                        <h4 class="font-bold text-slate-700">"Inspired" by Marty Cagan</h4>
+                        <p class="text-sm text-slate-500 mt-1">A foundational text for any product manager. It completely reframed how I think about building valuable products.</p>
+                        <span class="text-sm font-semibold text-teal-600 mt-2 inline-block group-hover:underline">View on Goodreads →</span>
+                    </div>
+                </a>
+                <!-- Book Card 2 -->
+                <a href="#" target="_blank" class="flex items-start gap-4 p-3 rounded-lg hover:bg-white transition-colors group">
+                    <img src="https://placehold.co/150x225/f9a8d4/1f2937?text=Book+Cover" alt="Book Cover" class="w-20 h-auto object-contain rounded-md flex-shrink-0">
+                    <div>
+                        <h4 class="font-bold text-slate-700">"Project Hail Mary" by Andy Weir</h4>
+                        <p class="text-sm text-slate-500 mt-1">An incredible sci-fi adventure about problem-solving on a galactic scale.</p>
+                        <span class="text-sm font-semibold text-teal-600 mt-2 inline-block group-hover:underline">Read my thoughts →</span>
+                    </div>
+                </a>
+                <!-- Add more book cards here... -->
+            </div>
+        </div>
+
+        <!-- == Movies & TV Panel == -->
+        <div id="movies-panel" class="tab-panel animate-on-scroll hidden">
+            <div class="grid md:grid-cols-2 gap-x-8 gap-y-6">
+                <!-- Movie Card 1 -->
+                <a href="#" target="_blank" class="flex items-start gap-4 p-3 rounded-lg hover:bg-white transition-colors group">
+                    <img src="https://placehold.co/200x300/6ee7b7/1f2937?text=Movie+Poster" alt="Movie Poster" class="w-20 h-auto object-contain rounded-md flex-shrink-0">
+                    <div>
+                        <h4 class="font-bold text-slate-700">Arrival (Movie)</h4>
+                        <p class="text-sm text-slate-500 mt-1">A stunning film about communication, time, and empathy.</p>
+                        <span class="text-sm font-semibold text-teal-600 mt-2 inline-block group-hover:underline">View on IMDb →</span>
+                    </div>
+                </a>
+                <!-- TV Card 1 -->
+                <a href="#" target="_blank" class="flex items-start gap-4 p-3 rounded-lg hover:bg-white transition-colors group">
+                    <img src="https://placehold.co/200x300/fde047/1f2937?text=TV+Show" alt="TV Poster" class="w-20 h-auto object-contain rounded-md flex-shrink-0">
+                    <div>
+                        <h4 class="font-bold text-slate-700">Severance (TV Show)</h4>
+                        <p class="text-sm text-slate-500 mt-1">A brilliantly designed corporate thriller with an unsettling mystery.</p>
+                        <span class="text-sm font-semibold text-teal-600 mt-2 inline-block group-hover:underline">View on TMDb →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- == Art Panel == -->
+        <div id="art-panel" class="tab-panel animate-on-scroll hidden">
+            <div class="grid md:grid-cols-2 gap-x-8 gap-y-6">
+                <!-- Artc Card 1 -->
+                <a href="#" target="_blank" class="flex items-start gap-4 p-3 rounded-lg hover:bg-white transition-colors group">
+                    <img src="https://placehold.co/200x200/a5b4fc/1f2937?text=Album+Art" alt="Album Art" class="w-20 h-auto object-contain rounded-md flex-shrink-0">
+                    <div>
+                        <h4 class="font-bold text-slate-700">Discovery by Daft Punk</h4>
+                        <p class="text-sm text-slate-500 mt-1">My go-to album for deep focus and creative work.</p>
+                        <span class="text-sm font-semibold text-teal-600 mt-2 inline-block group-hover:underline">Listen on Spotify →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+     <!-- START: New "View All" Button -->
+     <div class="text-center mt-12 animate-on-scroll">
+        <a href="media.html" class="inline-block bg-teal-200 text-teal-900 font-semibold px-6 py-2 rounded-full hover:bg-teal-300 transition-all shadow-md text-sm">
+            View All My Favorites <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+    </div>
+    <!-- END: New "View All" Button -->
+</section>
+    </main>
+<!-- ========== CONTACT & FOOTER ========== -->
+    <footer id="contact" class="bg-slate-800 text-white mt-24 relative overflow-hidden">
+
+        <!-- 1. The Canvas for the Animation -->
+        <!-- This div is intentionally empty. JavaScript will add the rising embers here. -->
+       
+        
+        <!-- 2. Your Actual Footer Content -->
+        <!-- This div holds all your visible text and links. -->
+        <!-- The "relative z-20" makes sure it sits ON TOP of the animation. -->
+        <div class="container mx-auto px-6 py-12 text-center relative z-20">
+            <h2 class="text-3xl font-bold mb-2">Let's Connect!</h2>
+            <p class="text-teal-100 mb-6 max-w-xl mx-auto">I'm always open to discussing new projects...</p>
+            <a href="mailto:your.email@example.com" class="inline-block bg-teal-200 text-teal-900 font-bold px-8 py-3 rounded-full hover:bg-teal-300 transition-all shadow-lg text-lg">Say Hello <i class="fas fa-paper-plane ml-2"></i></a>
+            <div class="mt-10 flex justify-center space-x-6 text-2xl">
+                <a href="#" class="hover:text-teal-300 transition-colors"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="hover:text-teal-300 transition-colors"><i class="fab fa-github"></i></a>
+                <a href="#" class="hover:text-teal-300 transition-colors"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p class="text-sm text-slate-500 mt-12">© 2024 Priyadharshini Rajaram. Crafted with ❤️</p>
+        </div>
+    
+    </footer>
+
+    <!-- ========== JAVASCRIPT ========== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        
+       // ========== SHOOTING STAR ANIMATION (NEW) ==========
+    const starContainer = document.getElementById('shimmer-container');
+    const particles = [];
+    const themeColors = ['#b2dfdb', '#7dd3fc', '#80cbc4', '#4db6ac']; // Teal and Sky colors from our theme
+
+    let isThrottled = false; // For performance optimization
+
+    const createStar = (x, y) => {
+        const star = document.createElement('div');
+        star.className = 'shooting-star';
+        
+        // Randomize properties for a natural look
+        const size = Math.random() * 5 + 2; // Size between 2px and 7px
+        const color = themeColors[Math.floor(Math.random() * themeColors.length)];
+
+        star.style.width = `${size}px`;
+        star.style.height = `${size}px`;
+        star.style.backgroundColor = color;
+        star.style.color = color; // For the box-shadow glow
+        star.style.left = `${x}px`;
+        star.style.top = `${y}px`;
+
+        starContainer.appendChild(star);
+
+        const particle = {
+            element: star,
+            x: x,
+            y: y,
+            // Velocity
+            dx: (Math.random() - 0.5) * 2,
+            dy: (Math.random() - 0.5) * 2,
+            life: 50 + Math.random() * 25 // Lifespan in frames
+        };
+        particles.push(particle);
+    };
+
+    const animateParticles = () => {
+        for (let i = particles.length - 1; i >= 0; i--) {
+            const p = particles[i];
+            
+            // Update position
+            p.x += p.dx;
+            p.y += p.dy;
+            p.life--;
+
+            // If particle is dead, fade it out and remove
+            if (p.life <= 0) {
+                p.element.style.opacity = '0';
+                // Remove from DOM after transition
+                setTimeout(() => {
+                    p.element.remove();
+                }, 500); // Must match CSS transition duration
+                particles.splice(i, 1);
+            } else {
+                // Update element style
+                p.element.style.transform = `translate(${p.x - p.element.offsetLeft}px, ${p.y - p.element.offsetTop}px)`;
+            }
+        }
+        requestAnimationFrame(animateParticles);
+    };
+
+    window.addEventListener('mousemove', (e) => {
+        if (isThrottled) return; // Don't create stars too fast
+        isThrottled = true;
+        
+        createStar(e.clientX, e.clientY);
+
+        setTimeout(() => {
+            isThrottled = false;
+        }, 50); // Throttle to every 50ms
+    });
+
+    // Start the animation loop
+    animateParticles();
+
+    
+
+             // ========== HOBBIES TABS LOGIC (NEW) ==========
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabPanels = document.querySelectorAll('.tab-panel');
+
+    const setActiveTab = (tab) => {
+        // Deactivate all buttons
+        tabButtons.forEach(btn => {
+            btn.classList.remove('border-teal-600', 'text-slate-800');
+            btn.classList.add('border-transparent', 'text-slate-500', 'hover:text-slate-700', 'hover:border-slate-300');
+        });
+
+        // Activate the clicked button
+        tab.classList.add('border-teal-600', 'text-slate-800');
+        tab.classList.remove('border-transparent', 'text-slate-500', 'hover:text-slate-700', 'hover:border-slate-300');
+
+        // Hide all panels
+        tabPanels.forEach(panel => panel.classList.add('hidden'));
+
+        // Show the target panel
+        const targetPanelId = tab.dataset.tab + '-panel';
+        const targetPanel = document.getElementById(targetPanelId);
+        if (targetPanel) {
+            targetPanel.classList.remove('hidden');
+        }
+    };
+
+    tabButtons.forEach(tab => {
+        tab.addEventListener('click', () => setActiveTab(tab));
+    });
+
+    // Set the first tab as active on page load
+    if(tabButtons.length > 0) {
+        setActiveTab(tabButtons[0]);
+    }
+
+    // ========== PROJECT MODAL LOGIC (NEW) ==========
+    const projectCardLinks = document.querySelectorAll('.project-card-link');
+    const modal = document.getElementById('project-modal');
+    const modalOverlay = document.getElementById('modal-overlay');
+    const modalCloseBtn = document.getElementById('modal-close-btn');
+
+    // Modal content elements
+    const modalImage = document.getElementById('modal-image');
+    const modalTags = document.getElementById('modal-tags');
+    const modalTitle = document.getElementById('modal-title');
+    const modalBody = document.getElementById('modal-body');
+    const modalLiveLink = document.getElementById('modal-live-link');
+    const modalGithubLink = document.getElementById('modal-github-link');
+
+    const openModal = (card) => {
+        const data = card.dataset;
+        
+        // Populate modal with data from the card
+        modalImage.src = data.image;
+        modalTitle.textContent = data.title;
+        modalBody.innerHTML = data.body;
+        
+        // Create tag pills
+        modalTags.innerHTML = ''; // Clear previous tags
+        if (data.tags) {
+            data.tags.split(',').forEach(tag => {
+                const tagEl = document.createElement('span');
+                tagEl.className = 'bg-slate-200 text-slate-700 px-2 py-1 rounded-md text-xs font-medium';
+                tagEl.textContent = tag.trim();
+                modalTags.appendChild(tagEl);
+            });
+        }
+        
+        // Handle links
+        updateLink(modalLiveLink, data.liveLink);
+        updateLink(modalGithubLink, data.githubLink);
+
+        // Show the modal
+        modal.classList.remove('hidden');
+        document.body.classList.add('overflow-hidden'); // Prevent background scroll
+        
+        // Trigger fade-in animation
+        setTimeout(() => modal.classList.add('is-open'), 10);
+    };
+
+    const closeModal = () => {
+        modal.classList.remove('is-open');
+        document.body.classList.remove('overflow-hidden'); // Re-enable scroll
+        
+        // Wait for animation to finish before hiding
+        setTimeout(() => modal.classList.add('hidden'), 300);
+    };
+    
+    const updateLink = (element, href) => {
+        if (href) {
+            element.href = href;
+            element.classList.remove('hidden');
+        } else {
+            element.classList.add('hidden');
+        }
+    };
+
+    // Event Listeners
+    projectCardLinks.forEach(card => {
+        card.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal(card);
+        });
+    });
+
+    modalOverlay.addEventListener('click', closeModal);
+    modalCloseBtn.addEventListener('click', closeModal);
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+            closeModal();
+        }
+    });
+
+
+            // ========== MOBILE MENU TOGGLE ==========
+            const menuToggleBtn = document.getElementById('menu-toggle-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+            if (menuToggleBtn && mobileMenu) {
+                menuToggleBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    document.body.classList.toggle('overflow-hidden');
+                    const icon = menuToggleBtn.querySelector('i');
+                    icon.classList.toggle('fa-bars');
+                    icon.classList.toggle('fa-xmark');
+                });
+            }
+
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        document.body.classList.remove('overflow-hidden');
+                        const icon = menuToggleBtn.querySelector('i');
+                        icon.classList.remove('fa-xmark');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+            });
+
+            // ========== SCROLL-TO-VIEW ANIMATION ==========
+            const scrollTargets = document.querySelectorAll('.animate-on-scroll');
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            scrollTargets.forEach(target => {
+                observer.observe(target);
+            });
+            
+            // ========== SUBSTACK FEED INTEGRATION ==========
+            getSubstackPosts();
+        });
+
+
+        // This script now ONLY handles the Substack feed integration.
+        const SUBSTACK_RSS_URL = 'https://prirri.substack.com/feed'; // Replace with your feed URL
+        const TAG_TO_FEATURE = 'Featured';
+
+        function formatDate(dateString) {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            return new Date(dateString).toLocaleDateString(undefined, options);
+        }
+
+        async function getSubstackPosts() {
+            const blogGrid = document.getElementById('blog-grid');
+            if (!blogGrid) return;
+            const converterApiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(SUBSTACK_RSS_URL)}`;
+
+            try {
+                const response = await fetch(converterApiUrl);
+                if (!response.ok) throw new Error('Network response was not ok');
+                const data = await response.json();
+                
+                const featuredPosts = data.items.filter(item => 
+                    item.categories && item.categories.includes(TAG_TO_FEATURE)
+                ).slice(0, 4);
+
+                if (featuredPosts.length === 0) {
+                    blogGrid.innerHTML = '<p class="text-center md:col-span-2 text-slate-500">No featured posts found. Make sure you have tagged posts as "Featured" on Substack.</p>';
+                    return;
+                }
+                
+                blogGrid.innerHTML = ''; 
+
+                featuredPosts.forEach(post => {
+                    const sanitizedContent = DOMPurify.sanitize(post.content);
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = sanitizedContent;
+                    const excerpt = tempDiv.textContent.substring(0, 150) + '...';
+
+                    const postCardHTML = `
+                        <a href="${post.link}" target="_blank" rel="noopener noreferrer" class="block p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow card-outline-blog animate-on-scroll">
+                            <p class="text-sm text-slate-500 mb-1">${formatDate(post.pubDate)} • ${post.categories.join(', ')}</p>
+                            <h3 class="font-bold text-xl mb-2 text-slate-700">${post.title}</h3>
+                            <p class="text-slate-600 text-sm">${excerpt}</p>
+                        </a>
+                    `;
+                    blogGrid.innerHTML += postCardHTML;
+                });
+                
+                // After adding new blog posts, re-observe them for animations
+                const newScrollTargets = blogGrid.querySelectorAll('.animate-on-scroll');
+                const newObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1 });
+                newScrollTargets.forEach(target => newObserver.observe(target));
+
+            } catch (error) {
+                console.error('Error fetching Substack posts:', error);
+                blogGrid.innerHTML = '<p class="text-center md:col-span-2 text-red-500">Could not load posts. Please check your RSS feed URL.</p>';
+            }
+        }
+    </script>
+    <!-- ========== Project Modal ========== -->
+<div id="project-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 transition-opacity duration-300">
+    <!-- Modal Overlay -->
+    <div id="modal-overlay" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+    
+    <!-- Modal Content -->
+    <div id="modal-content" class="relative z-10 w-full max-w-4xl bg-white rounded-2xl shadow-2xl overflow-hidden transform transition-all duration-300 scale-95">
+        <button id="modal-close-btn" class="absolute top-4 right-4 text-slate-500 hover:text-slate-800 text-2xl z-20">×</button>
+        
+        <div class="max-h-[90vh] overflow-y-auto">
+            <img id="modal-image" src="" alt="Project image" class="w-full h-64 object-cover">
+            <div class="p-6 md:p-10">
+                <div id="modal-tags" class="flex flex-wrap gap-2 text-sm mb-4"></div>
+                <h2 id="modal-title" class="text-3xl font-bold font-display text-slate-800 mb-4"></h2>
+                <div id="modal-body" class="text-slate-600 space-y-4"></div>
+                
+                <div class="mt-8 pt-6 border-t border-slate-200 flex items-center gap-4">
+                    <a id="modal-live-link" href="#" target="_blank" class="inline-block bg-teal-500 text-white font-bold px-6 py-2 rounded-full hover:bg-teal-600 transition-colors">View Live Project <i class="fas fa-arrow-up-right-from-square ml-2 text-xs"></i></a>
+                    <a id="modal-github-link" href="#" target="_blank" class="inline-block text-slate-600 font-semibold hover:text-teal-600 transition-colors">View on GitHub <i class="fab fa-github ml-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
