@@ -20,7 +20,7 @@
               300: '#4db6ac',
               400: '#26a69a',
               500: '#009688', // A standard Teal
-              600: '#2f9ea8', // Your Custom Teal
+              600: '#2f9ea8', 
               700: '#00796b',
               800: '#00695c',
               900: '#004d40'
@@ -47,38 +47,81 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="text-slate-600 antialiased">
+          <!-- START: NEW Top Accent Bar -->
+    <div id="top-accent-bar"></div>
+    <!-- END: Top Accent Bar -->
+        <!-- START: NEW Sticky Social Sidebar -->
+        <div class="hidden lg:flex flex-col items-center fixed bottom-0 left-10 z-30">
+            <!-- Social Icons -->
+            <div class="flex flex-col items-center space-y-6">
+                <a href="#" target="_blank" class="text-slate-500 hover:text-teal-600 transform hover:-translate-y-1 transition-all" title="GitHub"><i class="fab fa-github text-xl"></i></a>
+                <a href="#" target="_blank" class="text-slate-500 hover:text-teal-600 transform hover:-translate-y-1 transition-all" title="LinkedIn"><i class="fab fa-linkedin text-xl"></i></a>
+                <a href="#" target="_blank" class="text-slate-500 hover:text-teal-600 transform hover:-translate-y-1 transition-all" title="Instagram"><i class="fab fa-instagram text-xl"></i></a>
+                <a href="#" target="_blank" class="text-slate-500 hover:text-teal-600 transform hover:-translate-y-1 transition-all" title="Substack"><i class="fas fa-file-alt text-xl"></i></a> <!-- Using a file icon for Substack -->
+            </div>
+            <!-- Vertical Line -->
+            <div class="w-px h-24 bg-slate-400 mt-6"></div>
+        </div>
+        <!-- END: Sticky Social Sidebar -->
+    
+        <!-- START: NEW Sticky Email Sidebar -->
+        <div class="hidden lg:flex flex-col items-center fixed bottom-0 right-10 z-30">
+            <!-- Your Email -->
+            <a href="mailto:your.email@example.com" class="font-mono text-sm tracking-widest text-slate-500 hover:text-teal-600 transition-colors writing-mode-vertical-rl">
+                your.email@example.com
+            </a>
+            <!-- Vertical Line -->
+            <div class="w-px h-24 bg-slate-400 mt-6"></div>
+        </div>
+        <!-- END: Sticky Email Sidebar -->
+
 
     <!-- ========== HEADER ========== -->
-    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-lg shadow-sm">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+<header class="sticky top-0 z-50 bg-white/80 backdrop-blur-lg shadow-sm">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        
+        <!-- Left Side: Logo and Main Nav Links -->
+        <div class="flex items-center space-x-8">
             <a href="#" class="font-bold text-2xl text-slate-800">PR.</a>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-700">
+                <a href="#about" class="hover:text-teal-600 transition-colors">About</a>
+                <a href="#experience" class="hover:text-teal-600 transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-teal-600 transition-colors">Projects</a>
+                <a href="#blog" class="hover:text-teal-600 transition-colors">Blog</a>
+            </div>
+        </div>
+        
+        <!-- Right Side: Contact Button, Theme Toggle, and Mobile Menu -->
+        <div class="flex items-center space-x-4">
+            <!-- Desktop "Contact Me" Button -->
+            <a href="#contact" class="hidden md:inline-block bg-brand-mint text-slate-900 font-bold px-6 py-2 rounded-full hover:opacity-90 transition-opacity shadow-md text-sm">Contact Me</a>
             
-            <!-- Desktop Navigation -->
-            <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-700 items-center">
-            <a href="#about" class="hover:text-teal-600 transition-colors">About</a>
-<a href="#experience" class="hover:text-teal-600 transition-colors">Experience</a>
-<a href="#projects" class="hover:text-teal-600 transition-colors">Projects</a>
-<a href="#blog" class="hover:text-teal-600 transition-colors">Blog</a>
-<a href="#contact" class="bg-teal-200 text-teal-900 px-4 py-2 rounded-full hover:bg-teal-300 transition-all shadow">Contact Me</a>
-</div>
+            <!-- Theme Toggle -->
+            <button id="theme-toggle-btn" class="text-slate-500 hover:text-teal-600 transition-colors text-xl">
+                <i class="fas fa-sun theme-icon-sun"></i>
+                <i class="fas fa-moon theme-icon-moon hidden"></i>
+            </button>
             
             <!-- Mobile Menu Button -->
             <button id="menu-toggle-btn" class="md:hidden text-2xl z-50">
                 <i class="fas fa-bars"></i>
             </button>
-        </nav>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden absolute top-0 left-0 w-full h-screen bg-white/95 backdrop-blur-lg">
-            <div class="flex flex-col items-center justify-center h-full space-y-8 text-xl">
-                <a href="#about" class="mobile-menu-link font-semibold text-slate-700 hover:text-teal-600">About</a>
-                <a href="#experience" class="mobile-menu-link font-semibold text-slate-700 hover:text-teal-600">Experience</a>
-                <a href="#projects" class="mobile-menu-link font-semibold text-slate-700 hover:text-teal-600">Projects</a>
-                <a href="#blog" class="mobile-menu-link font-semibold text-slate-700 hover:text-teal-600">Blog</a>
-                <a href="#contact" class="mobile-menu-link bg-teal-200 text-teal-900 px-6 py-3 rounded-full hover:bg-teal-300">Contact Me</a>
-            </div>
         </div>
-    </header>
+
+    </nav>
+
+    <!-- Mobile Menu (Now includes the Contact Me link) -->
+    <div id="mobile-menu" class="hidden md:hidden absolute top-0 left-0 w-full h-screen bg-white/95 backdrop-blur-lg">
+        <div class="flex flex-col items-center justify-center h-full space-y-8 text-xl">
+            <a href="#about" class="mobile-menu-link font-semibold text-slate-700 hover:text-teal-600">About</a>
+            <a href="#experience" class="mobile-menu-link font-semibold text-slate-700 hover:text-teal-600">Experience</a>
+            <a href="#projects" class="mobile-menu-link font-semibold text-slate-700 hover:text-teal-600">Projects</a>
+            <a href="#blog" class="mobile-menu-link font-semibold text-slate-700 hover:text-teal-600">Blog</a>
+            <!-- Added the "Contact Me" button to the mobile menu for consistency -->
+            <a href="#contact" class="mobile-menu-link bg-brand-mint text-slate-900 px-6 py-3 rounded-full hover:opacity-90">Contact Me</a>
+        </div>
+    </div>
+</header>
 
     <!-- ========== MAIN CONTENT ========== -->
     <main class="container mx-auto px-6 py-12 md:py-20">
@@ -87,15 +130,15 @@
 <section class="text-center">
       
     <div id="shimmer-container" class="absolute inset-0 -z-10">
-        <!-- This container is now a blank canvas for our JS particles -->
+        <!-- This container is now a blank canvas for JS particles -->
     </div>
-    <!-- START: New Name "Strip" -->
+    <!-- START: Name "Strip" -->
     <div class="mb-5">
         <span class="inline-block bg-teal-100 text-teal-800 px-3 py-1 rounded-md font-semibold text-sm tracking-wider uppercase">
             Priyadharshini Rajaram
         </span>
     </div>
-    <!-- END: New Name "Strip" -->
+    <!-- END: Name "Strip" -->
 
     <!-- Updated Headline -->
     <h1 class="text-4xl md:text-5xl font-bold text-slate-800 leading-tight">I Make Tech Feel More Human.</h1>
@@ -105,8 +148,11 @@
 
 </section>
         
-        <!-- ========== About Section (Updated) ========== -->
+        <!-- ========== About Section========== -->
 <section id="about" class="mt-24">
+    <div id="shimmer-container" class="absolute inset-0 -z-10">
+        <!-- This container is now a blank canvas for JS particles -->
+    </div>
     <div class="grid md:grid-cols-3 gap-12 items-center">
         <!-- Image Column -->
         <div class="md:col-span-1 flex justify-center">
@@ -117,12 +163,12 @@
         <div class="md:col-span-2 animate-on-scroll">
             <h2 class="text-2xl font-bold text-slate-800 mb-4">A Little About Me</h2>
             <p class="text-slate-500 mb-6">
-                Before I was shaping products, I was shipping code. As a full-stack developer, I loved the logic and challenge of building software. But I quickly realized my real passion wasn't just in writing the code, but in architecting the *experience*. I was the developer who was always fascinated by the human story behind every feature.
+                Before I was shaping products, I was shipping code. As a full-stack developer, I loved the logic and challenge of building software. But I quickly realised my real passion wasn't just in writing the code, but in architecting the *experience*. I was the developer who was always fascinated by the human story behind every feature.
                 <br>
                 Making the leap to product management was a natural evolution. It allowed me to combine my firsthand knowledge of building software with my passion for crafting the user's journey—creating products that are not only technically sound, but are a genuine joy for people to use.
                 </p>
 
-            <!-- START: New Social & Resume Icons -->
+            <!-- START: Social & Resume Icons -->
             <div class="mt-6 mb-8 flex items-center space-x-6">
                 <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" aria-label="View my LinkedIn profile" title="LinkedIn Profile" class="text-slate-500 hover:text-teal-600 transition-colors text-2xl">
                     <i class="fab fa-linkedin"></i>
@@ -141,35 +187,36 @@
 
 <!-- ========== Skills & Philosophy Section (NEW) ========== -->
 <section id="approach" class="mt-24">
+    
     <!-- The new main heading for the section -->
     <div class="text-center animate-on-scroll">
-        <h2 class="text-3xl font-bold text-slate-800 mb-12">My Approach & Philosophy</h2>
+        <!--<h2 class="text-3xl font-bold text-slate-800 mb-12">My Approach & Philosophy</h2>-->
     </div>
 
-    <!-- The grid you just "cut" goes inside here, now perfectly centered -->
+    <!-- The grid you just "cut" goes inside here-->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10 max-w-4xl mx-auto">
         <div class="animate-on-scroll">
             <h3 class="font-bold text-lg mb-3 flex items-center text-slate-700">
                 <i class="fas fa-star text-teal-400 mr-2"></i> My PM Superpowers
             </h3>
             <ul class="list-none space-y-2 text-slate-500">
-                <li class="pl-4 border-l-2 border-teal-200"><strong>Full-Spectrum Empathy:</strong> I can empathize with the user's needs *and* the engineer's challenges, making for smoother, faster, and happier development cycles.</li>
+                <li class="pl-4 border-l-2 border-teal-200"><strong>Full-Spectrum Empathy:</strong> I can empathise with the user's needs and the engineer's challenges, making for smoother, faster, and happier development cycles.</li>
                 <li class="pl-4 border-l-2 border-teal-200"><strong>From Code to Customer:</strong> My background allows me to grasp technical constraints instantly, leading to more realistic roadmaps and better-informed decisions.</li>
                 <li class="pl-4 border-l-2 border-teal-200"><strong>Clear, Concise Communication:</strong> Translating complex user stories for engineers, and complex technical trade-offs for stakeholders.</li>
             </ul>
         </div>
         <div class="animate-on-scroll">
             <h3 class="font-bold text-lg mb-3 flex items-center text-slate-700">
-                <i class="fas fa-book-open text-orange-400 mr-2"></i> Currently Geeking Out On
+                <i class="fas fa-book-open text-teal-400 mr-2"></i> Currently Geeking Out On
             </h3>
             <ul class="list-none space-y-2 text-slate-500">
-                <li class="pl-4 border-l-2 border-orange-200">
-                    <strong>Beyond the Feature Factory:</strong> Setting product goals based on measurable user *outcomes*, not just a checklist of things to build.
+                <li class="pl-4 border-l-2 border-teal-200">
+                    <strong>Beyond the Feature Factory:</strong> Setting product goals based on measurable user outcomes, not just a checklist of things to build.
                 </li>
-                <li class="pl-4 border-l-2 border-orange-200">
+                <li class="pl-4 border-l-2 border-teal-200">
                     <strong>AI as a Creative Partner:</strong> Exploring how generative AI can be used not just for efficiency, but as a brainstorming tool to spark new and unexpected ideas.
                 </li>
-                <li class="pl-4 border-l-2 border-orange-200">
+                <li class="pl-4 border-l-2 border-teal-200">
                     <strong>The Psychology of Onboarding:</strong> How can the first 30 seconds of using a product create a lifelong, happy user?
                 </li>
             </ul>
@@ -177,56 +224,63 @@
     </div>
 </section>
         
-<!-- ========== Experience Section (NEW "Connected Highlights" Design) ========== -->
+<!-- ========== Experience Section========== -->
 <section id="experience" class="mt-24">
     <div class="text-center animate-on-scroll">
-        <h2 class="text-3xl font-bold text-slate-800 mb-16">My Professional Journey</h2>
+        <h2 class="experience-heading text-3xl font-bold text-slate-800 mb-16">Where I've Worked</h2>
     </div>
 
-    <!-- Container for the roles with the line -->
-    <div class="relative max-w-3xl mx-auto">
-        <!-- The new vertical line -->
-        <div class="absolute left-4 top-2 h-full w-0.5 bg-teal-200"></div>
-
-        <div class="space-y-16">
-            <!-- Role Highlight 1 -->
-            <div class="role-item-connected animate-on-scroll">
-                <div class="role-content">
-                    <h3 class="text-2xl font-bold text-slate-800">Product Manager</h3>
-                    <p class="text-teal-600 font-semibold">Awesome Tech Inc. <span class="text-slate-400 font-normal">| Jan 2022 - Present</span></p>
-                    <p class="mt-4 text-slate-600">I was brought in to spearhead the creation of their flagship mobile platform from the ground up...</p>
-                    <ul class="mt-4 space-y-2">
-                        <li><i class="fas fa-check-circle text-teal-400 mr-2"></i>Owned the product roadmap...</li>
-                        <li><i class="fas fa-check-circle text-teal-400 mr-2"></i>Translated ambiguous user feedback...</li>
-                        <li><i class="fas fa-check-circle text-teal-400 mr-2"></i>Used data analytics...</li>
-                    </ul>
-                </div>
+    <div class="relative max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+        <!-- Left Column: Tab Buttons -->
+        <div class="md:col-span-1">
+            <div class="relative flex flex-row md:flex-col space-x-4 md:space-x-0 md:space-y-1">
+                <!-- UNIQUE ID for the indicator -->
+                <div id="experience-indicator" class="absolute left-0 top-0 h-full md:h-auto md:w-1 bg-teal-400 rounded-full md:rounded-none transition-all duration-300"></div>
+                
+                <!-- UNIQUE CLASS for the buttons -->
+                <button data-tab="cerina" class="experience-btn text-left p-3 z-10">Cerina Therapeutics</button>
+                <button data-tab="brainpool" class="experience-btn text-left p-3 z-10">Brainpool.ai</button>
+                <button data-tab="ey" class="experience-btn text-left p-3 z-10">Ernst & Young</button>
+                <button data-tab="proven-logic" class="experience-btn text-left p-3 z-10">Proven Logic</button>
             </div>
+        </div>
 
-            <!-- Role Highlight 2 -->
-            <div class="role-item-connected animate-on-scroll">
-                <div class="role-content">
-                    <h3 class="text-2xl font-bold text-slate-800">Associate Product Manager</h3>
-                    <p class="text-teal-600 font-semibold">Solutions Co. <span class="text-slate-400 font-normal">| Jun 2020 - Dec 2021</span></p>
-                    <p class="mt-4 text-slate-600">This was my proving ground...</p>
-                    <ul class="mt-4 space-y-2">
-                        <li><i class="fas fa-check-circle text-teal-400 mr-2"></i>Became the team's research lead...</li>
-                        <li><i class="fas fa-check-circle text-teal-400 mr-2"></i>Pioneered a new, data-informed onboarding flow...</li>
-                    </ul>
-                </div>
+        <!-- Right Column: Tab Content -->
+        <div class="md:col-span-3">
+            <!-- UNIQUE CLASS for the content panels -->
+            <div id="cerina-content" class="experience-content">
+                <h3 class="text-2xl font-bold text-slate-800">Technical Product Manager @ <span class="text-teal-600">Cerina Therapeutics</span></h3>
+                <p class="text-slate-500 font-medium mt-1">April 2021 - Present | AI, Healthcare</p>
+                <ul class="mt-4 space-y-3 text-slate-600">
+                    <li><i class="fas fa-play text-teal-400 mr-2"></i>I own and execute the product roadmap, translating high-level business goals into a clear, actionable strategy for the development team.</li>
+                    <li><i class="fas fa-play text-teal-400 mr-2"></i>Act as the bridge between UX and Engineering, ensuring we build an experience that is both beautiful and technically rock-solid.</li>
+                </ul>
             </div>
-
-            <!-- Role Highlight 3 -->
-            <div class="role-item-connected animate-on-scroll">
-                <div class="role-content">
-                    <h3 class="text-2xl font-bold text-slate-800">Full-Stack Developer</h3>
-                    <p class="text-teal-600 font-semibold">Innovate LLC. <span class="text-slate-400 font-normal">| 2018 - 2020</span></p>
-                    <p class="mt-4 text-slate-600">This is where I built my technical foundation...</p>
-                    <ul class="mt-4 space-y-2">
-                        <li><i class="fas fa-check-circle text-teal-400 mr-2"></i>Acted as a key technical resource...</li>
-                    </ul>
-                </div>
+            <div id="brainpool-content" class="experience-content hidden">
+                <h3 class="text-2xl font-bold text-slate-800">Full-Stack Web Developer @ <span class="text-teal-600">Brainpool.ai Ltd</span></h3>
+                <p class="text-slate-500 font-medium mt-1">November 2019 - March 2021 | AI</p>
+                <ul class="mt-4 space-y-3 text-slate-600">
+                    <li><i class="fas fa-play text-teal-400 mr-2"></i>Shipped production-ready features for a high-profile client list using React, Node.js, Figma, Devops</li>
+                    <li><i class="fas fa-play text-teal-400 mr-2"></i>This is where my passion for user experience truly took shape—I went beyond just building features to deeply understanding the client's needs.</li>
+                </ul>
             </div>
+            <div id="ey-content" class="experience-content hidden">
+                <h3 class="text-2xl font-bold text-slate-800">People Advisory Services, Associate @<span class="text-teal-600">Ernst & Young LLP</span></h3>
+                <p class="text-slate-500 font-medium mt-1">August 2017 - May 2018 | Analytics, Data, Cross Team Collaboration</p>
+                <ul class="mt-4 space-y-3 text-slate-600">
+                    <li><i class="fas fa-play text-teal-400 mr-2"></i>Honed my analytical skills in a high-stakes corporate environment, processing and analyzing information from multiple stakeholders to ensure data accuracy.</li>
+                    <li><i class="fas fa-play text-teal-400 mr-2"></i>Gained invaluable experience in project management and cross-team collaboration, skills that are now central to my product leadership approach.</li>
+                </ul>
+            </div>
+            <div id="proven-logic-content" class="experience-content tab-content hidden">
+                <h3 class="text-2xl font-bold text-slate-800">Digital Marketing Intern @ <span class="text-teal-600">Proven Logic</span></h3>
+                <p class="text-slate-500 font-medium mt-1">June 2015 - November 2015</p>
+                <ul class="mt-4 space-y-3 text-slate-600">
+                    <li><i class="fas fa-play text-teal-400 mr-2"></i>This was my first taste of the tech world, where I learned the fundamentals of how users discover and interact with products online through SEO, Social Media, and PPC.</li>
+                    <li><i class="fas fa-play text-teal-400 mr-2"></i>Analysed website traffic with Google Analytics, giving me my first glimpse into the power of data to understand user behavior and drive business decisions.</li>
+                </ul>
+            </div>
+        </div>
         </div>
     </div>
 </section>
@@ -239,12 +293,16 @@
         <div class="bg-white p-6 rounded-2xl shadow-md animate-on-scroll card-outline-project">
             <h3 class="font-bold text-xl text-slate-700 mb-4 text-center">Product & Strategy</h3>
             <div class="flex flex-wrap justify-center gap-2 text-sm font-medium">
-                <span class="bg-slate-200 text-slate-700 px-3 py-1 rounded-full">Roadmapping</span>
-                <span class="bg-slate-200 text-slate-700 px-3 py-1 rounded-full">User Research</span>
-                <span class="bg-slate-200 text-slate-700 px-3 py-1 rounded-full">A/B Testing</span>
-                <span class="bg-slate-200 text-slate-700 px-3 py-1 rounded-full">Agile/Scrum</span>
-                <span class="bg-slate-200 text-slate-700 px-3 py-1 rounded-full">Market Analysis</span>
-                <span class="bg-slate-200 text-slate-700 px-3 py-1 rounded-full">User Personas</span>
+                <span class="coreskills-text bg-teal-100 px-3 py-1 rounded-full">Roadmapping</span>
+                <span class="coreskills-text bg-teal-100 px-3 py-1 rounded-full">Product Vision & Strategy</span>
+                <span class="coreskills-text bg-teal-100 px-3 py-1 rounded-full">Agile/Scrum</span>
+                <span class="coreskills-text bg-teal-100 px-3 py-1 rounded-full">User Research</span>
+                <span class="coreskills-text bg-teal-100 px-3 py-1 rounded-full">UX UI Design</span>
+                <span class="coreskills-text bg-teal-100 px-3 py-1 rounded-full">UA Testing</span>
+                <span class="coreskills-text bg-teal-100 px-3 py-1 rounded-full">Stakeholder Management</span>
+                <span class="coreskills-text bg-teal-100 px-3 py-1 rounded-full">Product Launches</span>
+                <span class="coreskills-text bg-teal-100 px-3 py-1 rounded-full">User Personas</span>
+                <span class="coreskills-text bg-teal-100 px-3 py-1 rounded-full">Performance Metrics</span>
             </div>
         </div>
 
@@ -252,11 +310,17 @@
         <div class="bg-white p-6 rounded-2xl shadow-md animate-on-scroll card-outline-book">
              <h3 class="font-bold text-xl text-slate-700 mb-4 text-center">Technical & Data</h3>
              <div class="flex flex-wrap justify-center gap-2 text-sm font-medium">
-                <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full">Advanced SQL</span>
-                <span class="bg-slate-200 text-slate-700 px-3 py-1 rounded-full">API Integration</span>
-                <span class="bg-slate-200 text-slate-700 px-3 py-1 rounded-full">Data Analysis</span>
-                <span class="bg-slate-200 text-slate-700 px-3 py-1 rounded-full">Google Analytics</span>
-                <span class="bg-slate-200 text-slate-700 px-3 py-1 rounded-full">Looker Studio</span>
+                <span class="bg-teal-100 coreskills-text px-3 py-1 rounded-full">MERN Stack (React/Node)</span>
+                <span class="bg-teal-100 coreskills-text px-3 py-1 rounded-full">SQL, NoSQL</span>
+                <span class="bg-teal-100 coreskills-text px-3 py-1 rounded-full">Python</span>
+                <span class="bg-teal-100 coreskills-text px-3 py-1 rounded-full">Prompt Engineering</span>
+                <span class="bg-teal-100 coreskills-text px-3 py-1 rounded-full">Google Analytics</span>
+                <span class="bg-teal-100 coreskills-text px-3 py-1 rounded-full">Cloud Architecture (AWS)</span>
+                <span class="bg-teal-100 coreskills-text px-3 py-1 rounded-full">Devops</span>
+                <span class="bg-teal-100 coreskills-text px-3 py-1 rounded-full">Regulatory Compliance</span>
+                <span class="bg-teal-100 coreskills-text px-3 py-1 rounded-full">Data and Cyber security</span>
+                <span class="bg-teal-100 coreskills-text px-3 py-1 rounded-full">System Architecture</span>
+                <span class="bg-teal-100 coreskills-text px-3 py-1 rounded-full">API Design & Integration</span>
              </div>
         </div>
 
@@ -264,11 +328,13 @@
         <div class="bg-white p-6 rounded-2xl shadow-md animate-on-scroll card-outline-blog">
              <h3 class="font-bold text-xl text-slate-700 mb-4 text-center">Tools & Platforms</h3>
              <div class="flex flex-wrap justify-center gap-2 text-sm font-medium">
-                <span class="bg-slate-200 text-slate-700 px-3 py-1 rounded-full">Jira</span>
-                <span class="bg-slate-200 text-slate-700 px-3 py-1 rounded-full">Figma</span>
-                <span class="bg-slate-200 text-slate-700 px-3 py-1 rounded-full">Webflow</span>
-                <span class="bg-slate-200 text-slate-700 px-3 py-1 rounded-full">Amplitude</span>
-                <span class="bg-slate-200 text-slate-700 px-3 py-1 rounded-full">Substack</span>
+                <span class="bg-teal-100 coreskills-text px-3 py-1 rounded-full">Jira, Cickup, Notopn, Airtable</span>
+                <span class="bg-teal-100 coreskills-text px-3 py-1 rounded-full">Figma</span>
+                <span class="bg-teal-100 coreskills-text px-3 py-1 rounded-full">Webflow</span>
+                <span class="bg-teal-100 coreskills-text px-3 py-1 rounded-full">Google Analytics</span>
+                <span class="bg-teal-100 coreskills-text px-3 py-1 rounded-full">Postman (API Testing)</span>
+                <span class="bg-teal-100 coreskills-text px-3 py-1 rounded-full">Headless CMS</span>
+                
              </div>
         </div>
 
@@ -331,8 +397,8 @@
         <!-- Blog Section -->
         <section id="blog" class="mt-24"><h2 class="text-3xl font-bold text-slate-800 text-center mb-8 animate-on-scroll">From My Blog</h2><div id="blog-grid" class="grid md:grid-cols-2 gap-8"><p class="text-center md:col-span-2 text-slate-500">Loading latest posts...</p></div><div class="text-center mt-8 animate-on-scroll"><a href="https://priri.substack.com" target="_blank" rel="noopener noreferrer" class="font-semibold text-teal-600 hover:underline">See all posts on Substack →</a></div></section>
         
- <!-- ========== Hobbies Section (NEW and Rebuilt) ========== -->
-
+ 
+<!-- ========== Hobbies Section (Final Code) ========== -->
 <section id="hobbies" class="mt-24">
     <!-- Main Section Heading -->
     <div class="text-center animate-on-scroll">
@@ -340,103 +406,81 @@
         <p class="max-w-2xl mx-auto text-slate-500">When I'm not thinking about products, I'm usually diving into stories in all their forms. Here are a few things I've enjoyed lately.</p>
     </div>
 
-    <!-- ===== Tab Navigation ===== -->
-    <div class="mt-12 mb-8 border-b border-slate-200 flex justify-center animate-on-scroll">
-        <div id="tabs-container" class="flex space-x-4 md:space-x-8">
-            <button data-tab="books" class="tab-btn font-semibold pb-3 border-b-2 -mb-px">Books</button>
-            <button data-tab="movies" class="tab-btn font-semibold pb-3 border-b-2 -mb-px">Movies & TV</button>
-            <button data-tab="art" class="tab-btn font-semibold pb-3 border-b-2 -mb-px">Art</button>
-        </div>
-    </div>
-
-    <!-- ===== Tab Content Panels ===== -->
-    <div id="tab-content-panels">
-        <!-- == Books Panel == -->
-        <div id="books-panel" class="tab-panel animate-on-scroll">
-            <div class="grid md:grid-cols-2 gap-x-8 gap-y-6">
-                <!-- Book Card 1 -->
-                <a href="#" target="_blank" class="flex items-start gap-4 p-3 rounded-lg hover:bg-white transition-colors group">
-                    <img src="https://placehold.co/150x225/7dd3fc/1f2937?text=Book+Cover" alt="Book Cover" class="w-20 h-auto object-contain rounded-md flex-shrink-0">
-                    <div>
-                        <h4 class="font-bold text-slate-700">"Inspired" by Marty Cagan</h4>
-                        <p class="text-sm text-slate-500 mt-1">A foundational text for any product manager. It completely reframed how I think about building valuable products.</p>
-                        <span class="text-sm font-semibold text-teal-600 mt-2 inline-block group-hover:underline">View on Goodreads →</span>
-                    </div>
-                </a>
-                <!-- Book Card 2 -->
-                <a href="#" target="_blank" class="flex items-start gap-4 p-3 rounded-lg hover:bg-white transition-colors group">
-                    <img src="https://placehold.co/150x225/f9a8d4/1f2937?text=Book+Cover" alt="Book Cover" class="w-20 h-auto object-contain rounded-md flex-shrink-0">
-                    <div>
-                        <h4 class="font-bold text-slate-700">"Project Hail Mary" by Andy Weir</h4>
-                        <p class="text-sm text-slate-500 mt-1">An incredible sci-fi adventure about problem-solving on a galactic scale.</p>
-                        <span class="text-sm font-semibold text-teal-600 mt-2 inline-block group-hover:underline">Read my thoughts →</span>
-                    </div>
-                </a>
-                <!-- Add more book cards here... -->
+    <!-- This is the main container for our reusable tab component. -->
+    <div class="tab-component">
+        <!-- Tab Navigation -->
+        <div class="mt-12 mb-8 border-b border-slate-200 flex justify-center">
+            <div id="tabs-container" class="relative flex space-x-4 md:space-x-8">
+                <!-- The indicator has a generic class, which is fine -->
+                <div class="tab-indicator absolute bottom-[-1px] h-[2px] rounded-full"></div>
+                
+                <!-- Add the new 'hobby-tab-btn' class here -->
+                <button data-tab="books" class="hobby-tab-btn tab-btn font-semibold pb-3 border-b-2 border-transparent -mb-px">Books</button>
+                <button data-tab="movies" class="hobby-tab-btn tab-btn font-semibold pb-3 border-b-2 border-transparent -mb-px">Movies & TV</button>
             </div>
         </div>
 
-        <!-- == Movies & TV Panel == -->
-        <div id="movies-panel" class="tab-panel animate-on-scroll hidden">
-            <div class="grid md:grid-cols-2 gap-x-8 gap-y-6">
-                <!-- Movie Card 1 -->
-                <a href="#" target="_blank" class="flex items-start gap-4 p-3 rounded-lg hover:bg-white transition-colors group">
-                    <img src="https://placehold.co/200x300/6ee7b7/1f2937?text=Movie+Poster" alt="Movie Poster" class="w-20 h-auto object-contain rounded-md flex-shrink-0">
-                    <div>
-                        <h4 class="font-bold text-slate-700">Arrival (Movie)</h4>
-                        <p class="text-sm text-slate-500 mt-1">A stunning film about communication, time, and empathy.</p>
-                        <span class="text-sm font-semibold text-teal-600 mt-2 inline-block group-hover:underline">View on IMDb →</span>
-                    </div>
-                </a>
-                <!-- TV Card 1 -->
-                <a href="#" target="_blank" class="flex items-start gap-4 p-3 rounded-lg hover:bg-white transition-colors group">
-                    <img src="https://placehold.co/200x300/fde047/1f2937?text=TV+Show" alt="TV Poster" class="w-20 h-auto object-contain rounded-md flex-shrink-0">
-                    <div>
-                        <h4 class="font-bold text-slate-700">Severance (TV Show)</h4>
-                        <p class="text-sm text-slate-500 mt-1">A brilliantly designed corporate thriller with an unsettling mystery.</p>
-                        <span class="text-sm font-semibold text-teal-600 mt-2 inline-block group-hover:underline">View on TMDb →</span>
-                    </div>
-                </a>
+        <!-- Tab Content Panels -->
+        <div id="tab-content-panels">
+            <!-- == Books Panel == -->
+            <!-- Each panel needs the generic .tab-content class and a unique ID that matches a data-tab -->
+            <div id="books-content" class="tab-content animate-on-scroll">
+                <div class="grid md:grid-cols-2 gap-x-8 gap-y-6">
+                    <!-- Book Card 1 -->
+                    <a href="#" target="_blank" class="flex items-start gap-4 p-3 rounded-lg hover:bg-slate-100/70 transition-colors group">
+                        <img src="https://placehold.co/150x225/7dd3fc/1f2937?text=Book+Cover" alt="Book Cover" class="w-20 h-auto object-contain rounded-md flex-shrink-0 shadow-md">
+                        <div>
+                            <h4 class="font-bold text-slate-700">"Inspired" by Marty Cagan</h4>
+                            <p class="text-sm text-slate-500 mt-1">A foundational text for any product manager. It completely reframed how I think about building valuable products.</p>
+                            <span class="text-sm font-semibold text-teal-600 mt-2 inline-block group-hover:underline">View on Goodreads →</span>
+                        </div>
+                    </a>
+                    <!-- Book Card 2 -->
+                    <a href="#" target="_blank" class="flex items-start gap-4 p-3 rounded-lg hover:bg-slate-100/70 transition-colors group">
+                        <img src="https://placehold.co/150x225/f9a8d4/1f2937?text=Book+Cover" alt="Book Cover" class="w-20 h-auto object-contain rounded-md flex-shrink-0 shadow-md">
+                        <div>
+                            <h4 class="font-bold text-slate-700">"Project Hail Mary" by Andy Weir</h4>
+                            <p class="text-sm text-slate-500 mt-1">An incredible sci-fi adventure about problem-solving on a galactic scale.</p>
+                            <span class="text-sm font-semibold text-teal-600 mt-2 inline-block group-hover:underline">Read my thoughts →</span>
+                        </div>
+                    </a>
+                </div>
             </div>
-        </div>
 
-        <!-- == Art Panel == -->
-        <div id="art-panel" class="tab-panel animate-on-scroll hidden">
-            <div class="grid md:grid-cols-2 gap-x-8 gap-y-6">
-                <!-- Artc Card 1 -->
-                <a href="#" target="_blank" class="flex items-start gap-4 p-3 rounded-lg hover:bg-white transition-colors group">
-                    <img src="https://placehold.co/200x200/a5b4fc/1f2937?text=Album+Art" alt="Album Art" class="w-20 h-auto object-contain rounded-md flex-shrink-0">
-                    <div>
-                        <h4 class="font-bold text-slate-700">Discovery by Daft Punk</h4>
-                        <p class="text-sm text-slate-500 mt-1">My go-to album for deep focus and creative work.</p>
-                        <span class="text-sm font-semibold text-teal-600 mt-2 inline-block group-hover:underline">Listen on Spotify →</span>
-                    </div>
-                </a>
+            <!-- == Movies & TV Panel == -->
+            <div id="movies-content" class="tab-content animate-on-scroll hidden">
+                <div class="grid md:grid-cols-2 gap-x-8 gap-y-6">
+                    <!-- Movie Card 1 -->
+                    <a href="#" target="_blank" class="flex items-start gap-4 p-3 rounded-lg hover:bg-slate-100/70 transition-colors group">
+                        <img src="https://placehold.co/200x300/6ee7b7/1f2937?text=Movie+Poster" alt="Movie Poster" class="w-20 h-auto object-contain rounded-md flex-shrink-0 shadow-md">
+                        <div>
+                            <h4 class="font-bold text-slate-700">Arrival (Movie)</h4>
+                            <p class="text-sm text-slate-500 mt-1">A stunning film about communication, time, and empathy.</p>
+                            <span class="text-sm font-semibold text-teal-600 mt-2 inline-block group-hover:underline">View on IMDb →</span>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-     <!-- START: New "View All" Button -->
-     <div class="text-center mt-12 animate-on-scroll">
+    
+    <!-- "View All" button linking to your separate media page -->
+    <div class="text-center mt-12 animate-on-scroll">
         <a href="media.html" class="inline-block bg-teal-200 text-teal-900 font-semibold px-6 py-2 rounded-full hover:bg-teal-300 transition-all shadow-md text-sm">
-            View All My Favorites <i class="fas fa-arrow-right ml-2"></i>
+            See What Else I'm Into  <i class="fas fa-arrow-right ml-2"></i>
         </a>
     </div>
-    <!-- END: New "View All" Button -->
 </section>
     </main>
 <!-- ========== CONTACT & FOOTER ========== -->
     <footer id="contact" class="bg-slate-800 text-white mt-24 relative overflow-hidden">
 
-        <!-- 1. The Canvas for the Animation -->
-        <!-- This div is intentionally empty. JavaScript will add the rising embers here. -->
-       
+
         
-        <!-- 2. Your Actual Footer Content -->
-        <!-- This div holds all your visible text and links. -->
-        <!-- The "relative z-20" makes sure it sits ON TOP of the animation. -->
+        <!-- Footer Content -->
         <div class="container mx-auto px-6 py-12 text-center relative z-20">
             <h2 class="text-3xl font-bold mb-2">Let's Connect!</h2>
-            <p class="text-teal-100 mb-6 max-w-xl mx-auto">I'm always open to discussing new projects...</p>
+            <p class="text-teal-100 mb-6 max-w-xl mx-auto">Whether you have a question about my work, a project you'd like to discuss, or just want to connect with another person who's passionate about making tech more human, I'd love to hear from you.</p>
             <a href="mailto:your.email@example.com" class="inline-block bg-teal-200 text-teal-900 font-bold px-8 py-3 rounded-full hover:bg-teal-300 transition-all shadow-lg text-lg">Say Hello <i class="fas fa-paper-plane ml-2"></i></a>
             <div class="mt-10 flex justify-center space-x-6 text-2xl">
                 <a href="#" class="hover:text-teal-300 transition-colors"><i class="fab fa-linkedin"></i></a>
@@ -451,11 +495,165 @@
     <!-- ========== JAVASCRIPT ========== -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            const experienceSection = document.getElementById('experience');
+    if (experienceSection) {
+        const expButtons = experienceSection.querySelectorAll('.experience-btn');
+        const expContents = experienceSection.querySelectorAll('.experience-content');
+        const expIndicator = document.getElementById('experience-indicator');
+
+        if (!expButtons.length || !expContents.length || !expIndicator) {
+            console.error("EXPERIENCE TABS ERROR: Could not find all necessary elements.");
+            return;
+        }
+
+        function moveExpIndicator(targetButton) {
+            if (window.innerWidth < 768) { // Horizontal on mobile
+                expIndicator.style.width = `${targetButton.offsetWidth}px`;
+                expIndicator.style.height = '100%';
+                expIndicator.style.top = '0';
+                expIndicator.style.left = `${targetButton.offsetLeft}px`;
+            } else { // Vertical on desktop
+                expIndicator.style.width = '2px';
+                expIndicator.style.height = `${targetButton.offsetHeight}px`;
+                expIndicator.style.top = `${targetButton.offsetTop}px`;
+                expIndicator.style.left = '0';
+            }
+        }
+
+        function switchExpTab(clickedButton) {
+            expButtons.forEach(button => button.classList.remove('is-active'));
+            expContents.forEach(content => content.classList.add('hidden'));
+
+            clickedButton.classList.add('is-active');
+            const contentId = `${clickedButton.dataset.tab}-content`;
+            const contentToShow = document.getElementById(contentId);
+            if (contentToShow) {
+                contentToShow.classList.remove('hidden');
+            }
+
+            moveExpIndicator(clickedButton);
+        }
+
+        expButtons.forEach(button => {
+            button.addEventListener('click', () => switchExpTab(button));
+        });
+        
+       
+        window.addEventListener('load', () => {
+             if (expButtons.length > 0) {
+                switchExpTab(expButtons[0]);
+            }
+            window.addEventListener('resize', () => {
+                const activeButton = experienceSection.querySelector('.experience-btn.is-active');
+                if (activeButton) moveExpIndicator(activeButton);
+            });
+        }, true); // Use capture phase for this listener
+    }
+
+    // ========== HOBBIES TABS UI LOGIC (Dedicated Script) ==========
+
+// Safety Check: Only run this code if the hobbies section exists on the page
+const hobbiesSection = document.getElementById('hobbies');
+if (hobbiesSection) {
+    const hobbyTabButtons = hobbiesSection.querySelectorAll('.hobby-tab-btn');
+    const hobbyTabContents = hobbiesSection.querySelectorAll('.tab-content');
+    const hobbyTabIndicator = hobbiesSection.querySelector('.tab-indicator');
+
+    function moveHobbyIndicator(targetButton) {
+        if (!targetButton || !hobbyTabIndicator) return;
+        
+        const buttonWidth = targetButton.offsetWidth;
+        const indicatorWidth = buttonWidth * 0.5; // Indicator is 50% of the button width
+        const newLeft = targetButton.offsetLeft + (buttonWidth - indicatorWidth) / 2;
+
+        hobbyTabIndicator.style.left = `${newLeft}px`;
+        hobbyTabIndicator.style.width = `${indicatorWidth}px`;
+    }
+
+    function switchHobbyTab(clickedButton) {
+        // Deactivate all HOBBY buttons
+        hobbyTabButtons.forEach(button => button.classList.remove('is-active'));
+        // Hide all HOBBY content panels
+        hobbyTabContents.forEach(content => content.classList.add('hidden'));
+
+        // Activate the clicked button
+        clickedButton.classList.add('is-active');
+        
+        // Find and show the correct content panel
+        const tabId = clickedButton.dataset.tab;
+        const contentToShow = document.getElementById(`${tabId}-content`); 
+        if (contentToShow) {
+            contentToShow.classList.remove('hidden');
+        }
+
+        moveHobbyIndicator(clickedButton);
+    }
+
+    // Add click listeners ONLY to the hobby buttons
+    hobbyTabButtons.forEach(button => {
+        button.addEventListener('click', () => switchHobbyTab(button));
+    });
+
+    // Set initial state for the first hobby tab
+    if (hobbyTabButtons.length > 0) {
+        // Use requestAnimationFrame to ensure layout is ready before moving indicator
+        requestAnimationFrame(() => {
+            switchHobbyTab(hobbyTabButtons[0]);
+        });
+    }
+
+    // Add resize listener to readjust the indicator
+    window.addEventListener('resize', () => {
+        const activeButton = hobbiesSection.querySelector('.hobby-tab-btn.is-active');
+        if (activeButton) {
+            moveHobbyIndicator(activeButton);
+        }
+    });
+}
+        // ========== DARK MODE TOGGLE LOGIC ==========
+    const themeToggleBtn = document.getElementById('theme-toggle-btn');
+    const sunIcon = document.querySelector('.theme-icon-sun');
+    const moonIcon = document.querySelector('.theme-icon-moon');
+    const htmlElement = document.documentElement;
+
+    // Function to apply the theme
+    const applyTheme = (theme) => {
+        if (theme === 'dark') {
+            htmlElement.classList.add('dark');
+            sunIcon.classList.add('hidden');
+            moonIcon.classList.remove('hidden');
+        } else {
+            htmlElement.classList.remove('dark');
+            sunIcon.classList.remove('hidden');
+            moonIcon.classList.add('hidden');
+        }
+    };
+
+    // Check for saved theme in localStorage on page load
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        applyTheme(savedTheme);
+    } else {
+        // Optional: check for system preference if no theme is saved
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        applyTheme(prefersDark ? 'dark' : 'light');
+    }
+
+    // Event listener for the toggle button
+    themeToggleBtn.addEventListener('click', () => {
+        const isDark = htmlElement.classList.contains('dark');
+        const newTheme = isDark ? 'light' : 'dark';
+        
+        localStorage.setItem('theme', newTheme); // Save the theme
+        applyTheme(newTheme);
+    });
+
+ 
         
        // ========== SHOOTING STAR ANIMATION (NEW) ==========
     const starContainer = document.getElementById('shimmer-container');
     const particles = [];
-    const themeColors = ['#b2dfdb', '#7dd3fc', '#80cbc4', '#4db6ac']; // Teal and Sky colors from our theme
+    const themeColors = ['#b2dfdb', '#7dd3fc', '#80cbc4', '#4db6ac']; // Teal and Sky colors from theme
 
     let isThrottled = false; // For performance optimization
 
@@ -528,42 +726,6 @@
     animateParticles();
 
     
-
-             // ========== HOBBIES TABS LOGIC (NEW) ==========
-    const tabButtons = document.querySelectorAll('.tab-btn');
-    const tabPanels = document.querySelectorAll('.tab-panel');
-
-    const setActiveTab = (tab) => {
-        // Deactivate all buttons
-        tabButtons.forEach(btn => {
-            btn.classList.remove('border-teal-600', 'text-slate-800');
-            btn.classList.add('border-transparent', 'text-slate-500', 'hover:text-slate-700', 'hover:border-slate-300');
-        });
-
-        // Activate the clicked button
-        tab.classList.add('border-teal-600', 'text-slate-800');
-        tab.classList.remove('border-transparent', 'text-slate-500', 'hover:text-slate-700', 'hover:border-slate-300');
-
-        // Hide all panels
-        tabPanels.forEach(panel => panel.classList.add('hidden'));
-
-        // Show the target panel
-        const targetPanelId = tab.dataset.tab + '-panel';
-        const targetPanel = document.getElementById(targetPanelId);
-        if (targetPanel) {
-            targetPanel.classList.remove('hidden');
-        }
-    };
-
-    tabButtons.forEach(tab => {
-        tab.addEventListener('click', () => setActiveTab(tab));
-    });
-
-    // Set the first tab as active on page load
-    if(tabButtons.length > 0) {
-        setActiveTab(tabButtons[0]);
-    }
-
     // ========== PROJECT MODAL LOGIC (NEW) ==========
     const projectCardLinks = document.querySelectorAll('.project-card-link');
     const modal = document.getElementById('project-modal');
